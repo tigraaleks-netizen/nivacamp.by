@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аренда Lada Niva Legend — Покоряй бездорожье!</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Правильные переменные Bootstrap */
+        :root {
+            --bs-primary: #FF6D00;
+            --bs-primary-rgb: 255, 109, 0;
+            --bs-secondary: #616161;
+            --bs-light: #FAFAFA;
+            --bs-dark: #212121;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bs-light);
+            color: var(--bs-dark);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #555 !important;
+            font-weight: 500;
+        }
+        .navbar-brand:hover,
+        .navbar-nav .nav-link:hover {
+            color: var(--bs-primary) !important;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            background: white;
+        }
+        .section {
+            padding: 60px 20px;
+        }
+        .section-title {
+            color: var(--bs-primary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .img-constrained {
+            max-height: 400px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+        footer {
+            background-color: var(--bs-dark);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .footer-link {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .footer-link:hover {
+            color: white;
+        }
+
+        /* Оранжевые кнопки */
+        .btn-orange {
+            background-color: var(--bs-primary) !important;
+            border-color: var(--bs-primary) !important;
+            color: white !important;
+            font-weight: 600;
+        }
+        .btn-orange:hover {
+            background-color: #e65100 !important;
+            border-color: #e65100 !important;
+        }
+
+        /* Instagram — оранжевый, а не красный */
+        .btn-instagram {
+            background-color: var(--bs-primary) !important;
+            border-color: var(--bs-primary) !important;
+            color: white !important;
+        }
+        .btn-instagram:hover {
+            background-color: #e65100 !important;
+            border-color: #e65100 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">NivaLegend.Pro</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#car">Автомобиль</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#terms">Условия</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how">Как арендовать</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="position-relative text-center text-white" style="background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://i.ibb.co/Kz8xWcCm/IMG-4045.jpg'); background-size: cover; background-position: center; padding: 120px 20px;">
+        <div class="container position-relative">
+            <h1 class="display-4 fw-bold mb-3" style="color: #ffffff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);">
+                Арендуйте Lada Niva Legend — покоряйте бездорожье!
+            </h1>
+            <p class="lead mb-4" style="color: #f8f9fa; font-size: 1.4rem; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);">
+                <span style="color: #FF6D00; font-size: 1.6rem; font-weight: 800;">Никаких инструкторов</span> и полная свобода — всего от 150 BYN/день.
+            </p>
+            <a href="#booking" class="btn btn-orange btn-lg px-5 py-3">
+                Забронировать сейчас
+            </a>
+        </div>
+    </section>
+
+    <!-- Описание автомобиля -->
+    <section id="car" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Почему именно Niva Legend?</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <img src="https://i.ibb.co/Mxq7jQfN/IMG-6405.jpg" alt="Lada Niva Legend" class="img-fluid img-constrained">
+                </div>
+                <div class="col-md-6">
+                    <h3>Технические характеристики</h3>
+                    <ul>
+                        <li><strong>Полный привод</strong> — для любой местности</li>
+                        <li><strong>Дорожный просвет</strong> — 220 мм</li>
+                        <li><strong>Объём багажника</strong> — до 630 л</li>
+                        <li><strong>Расход топлива</strong> — 10–11 л/100 км</li>
+                        <li><strong>Год выпуска</strong> — 2025</li>
+                        <li><strong>Грязевая резина</strong> — для максимального сцепления</li>
+                    </ul>
+                    <h3>Преимущества</h3>
+                    <ul>
+                        <li>✓ Отличная проходимость</li>
+                        <li>✓ Универсальность — для города, дачи, охоты, рыбалки</li>
+                        <li>✓ Возможность недорогой аренды на длительные сроки</li>
+                        <li>✓ Возможность аренды в разных комплектациях</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Условия аренды -->
+    <section id="terms" class="section">
+        <div class="container">
+            <h2 class="section-title">Простые и честные условия</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card p-4 text-center">
+                        <h4>Требования</h4>
+                        <p>Возраст от 21 года<br>Стаж от 2 лет<br>Права категории B</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4 text-center">
+                        <h4>Залог</h4>
+                        <p>15 000 ₽<br>Возвращается при возврате без повреждений</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4 text-center">
+                        <h4>Страховка</h4>
+                        <p>ОСАГО и КАСКО<br>Включены в стоимость</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card p-4 text-center">
+                        <h4>Что включено</h4>
+                        <p>Техосмотр<br>Запаска<br>Аптечка</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title mt-5">Тарифные пакеты</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <h4>Пакет «Лайт»</h4>
+                        <p>Нива по асфальту</p>
+                        <h3>150 BYN/сутки</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <h4>Пакет «Супер»</h4>
+                        <p>Нива по бездорожью</p>
+                        <h3>250 BYN/сутки</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <h4>Пакет «Миди»</h4>
+                        <p>Нива по асфальту с палаткой на крышу</p>
+                        <h3>200 BYN/сутки</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <h4>Пакет «Макси»</h4>
+                        <p>Нива с палаткой на крышу по бездорожью</p>
+                        <h3>300 BYN/сутки</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <h4>Пакет «Премиум»</h4>
+                        <p>Нива с палаткой, 2 SUP-досками и набором для пикника</p>
+                        <h3>350 BYN/сутки</h3>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 text-center">
+                        <h4>Почасовая аренда</h4>
+                        <p>Гибкий тариф</p>
+                        <h3>50 BYN/час</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Фотогалерея -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--bs-primary);">Фотогалерея</h2>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/Kz8xWcCm/IMG-4045.jpg" alt="Фото 1" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/hFHxmfk5/IMG-6415.jpg" alt="Фото 2" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/n8CfNrHg/IMG-6475.jpg" alt="Фото 3" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/fznS84Ft/IMG-7085.jpg" alt="Фото 4" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/Kz8xWcCm/IMG-4045.jpg" alt="Фото 5" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/Mxq7jQfN/IMG-6405.jpg" alt="Фото 6" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/Kz8xWcCm/IMG-4045.jpg" alt="Фото 7" class="gallery-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="https://i.ibb.co/Mxq7jQfN/IMG-6405.jpg" alt="Фото 8" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как арендовать -->
+    <section id="how" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Как арендовать за 4 шага</h2>
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h4>1. Выберите даты</h4>
+                    <p>Укажите период аренды онлайн</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <h4>2. Оставьте заявку</h4>
+                    <p>Заполните простую форму</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="feature-icon"><i class="fas fa-phone"></i></div>
+                    <h4>3. Подтвердите бронь</h4>
+                    <p>Менеджер свяжется с вами</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <div class="feature-icon"><i class="fas fa-car"></i></div>
+                    <h4>4. Получите авто</h4>
+                    <p>Заберите автомобиль в удобном месте</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма бронирования -->
+    <section id="booking" class="section">
+        <div class="container">
+            <h2 class="section-title">Оставьте заявку — перезвоним за 5 минут!</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="bookingForm" class="p-4 bg-white rounded shadow">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Имя *</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="+375 __ ___-__-__" required>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="startDate" class="form-label">Дата начала *</label>
+                                <input type="date" class="form-control" id="startDate" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="endDate" class="form-label">Дата окончания *</label>
+                                <input type="date" class="form-control" id="endDate" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="package" class="form-label">Выберите пакет *</label>
+                            <select class="form-select" id="package" required>
+                                <option value="">Выберите тариф</option>
+                                <option>Пакет «Лайт» — 150 BYN/сутки</option>
+                                <option>Пакет «Супер» — 250 BYN/сутки</option>
+                                <option>Пакет «Миди» — 200 BYN/сутки</option>
+                                <option>Пакет «Макси» — 300 BYN/сутки</option>
+                                <option>Пакет «Премиум» — 350 BYN/сутки</option>
+                                <option>Почасовая аренда — 50 BYN/час</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">Комментарий</label>
+                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agree" required>
+                            <label class="form-check-label" for="agree">Согласен на обработку персональных данных</label>
+                        </div>
+                        <button type="submit" class="btn btn-orange w-100">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Отзывы клиентов</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Клиент" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5>Андрей</h5>
+                                <small>г. Минск, январь 2025</small>
+                            </div>
+                        </div>
+                        <p>«Взял Niva на выходные по маршруту Минск–Несвиж–Мир. Машина справилась отлично! Никаких сложностей, только свобода.»</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Клиент" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5>Марина</h5>
+                                <small>г. Минск, февраль 2025</small>
+                            </div>
+                        </div>
+                        <p>«Арендовали авто на 3 дня по нашему маршруту через Беловежскую пущу. Всё прошло идеально — никаких инструкторов, только мы и природа!»</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Клиент" class="rounded-circle me-3" width="60">
+                            <div>
+                                <h5>Сергей</h5>
+                                <small>г. Минск, март 2025</small>
+                            </div>
+                        </div>
+                        <p>«Недельное путешествие по всей Беларуси — от Гродно до Бреста. Niva Legend выдержала всё! Машина надёжная, аренда — без подводных камней.»</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-orange">Оставить свой отзыв</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h3>Контактная информация</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Адрес: г. Минск, ул. Каменногорская, 45</p>
+                        <p><i class="fas fa-phone"></i> Телефон: <a href="tel:+375333864363">+375 33 386-43-63</a></p>
+                        <p><i class="fab fa-telegram"></i> Telegram: <a href="https://t.me/Alex_Vasilevich">@Alex_Vasilevich</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Карта</h3>
+					
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2348.875378262092!2d27.42675877453584!3d53.93395784652531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc4c09e1efc35%3A0xbba5d19b76c65f30!2z0YPQuy4g0JrQsNC80LXQvdC90L7Qs9C-0YDRgdC60LDRjyA0NSwg0JzQuNC90YHQuiwg0JzQuNC90YHQutCw0Y8g0L7QsdC70LDRgdGC0Yw!5e0!3m2!1sru!2sby!4v1760541637397!5m2!1sru!2sby"
+  width="100%"
+  height="300"
+  style="border:0; border-radius: 8px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <h4>Мы в Instagram</h4>
+                <a href="https://www.instagram.com/niva_prokat_minsk?igsh=emJodjBwNGx2MTll" target="_blank" class="btn btn-instagram">
+                    <i class="fab fa-instagram"></i> niva_prokat_minsk
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 NivaLegend.Pro — прокат Lada Niva Legend</p>
+            <p>
+                <a href="#" class="footer-link">Политика конфиденциальности</a> | 
+                <a href="#" class="footer-link">Пользовательское соглашение</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Telegram Form Handler -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const startDate = document.getElementById('startDate').value || '—';
+            const endDate = document.getElementById('endDate').value || '—';
+            const package = document.getElementById('package').value || '—';
+            const comment = document.getElementById('comment').value.trim() || '—';
+
+            if (!name || !phone) {
+                alert('Пожалуйста, заполните все обязательные поля.');
+                return;
+            }
+
+            const message = `
+🆕 Новая заявка на аренду Niva Legend!
+
+👤 Имя: ${name}
+📱 Телефон: ${phone}
+📅 Даты: ${startDate} — ${endDate}
+📦 Пакет: ${package}
+💬 Комментарий: ${comment}
+            `.trim();
+
+            const BOT_TOKEN = '8307317201:AAEFXbOXvc41whR0bHGW5By5GrbwlsWSEMA';
+            const CHAT_ID = '397675512';
+            const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ chat_id: CHAT_ID, text: message })
+                });
+
+                if (response.ok) {
+                    alert('✅ Заявка отправлена! Мы свяжемся с вами в течение 5 минут.');
+                    this.reset();
+                } else {
+                    alert('❌ Не удалось отправить заявку. Попробуйте позже.');
+                }
+            } catch (error) {
+                alert('❌ Ошибка подключения. Проверьте интернет.');
+            }
+        });
+    </script>
+</body>
+</html>
