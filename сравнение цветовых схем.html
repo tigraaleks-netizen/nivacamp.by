@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Цветовые схемы для Niva Legend</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .scheme {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: white;
+        }
+        .scheme-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        .colors {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .color-box {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 3px rgba(0,0,0,0.5);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .color-box:hover {
+            transform: scale(1.1);
+        }
+        .usage {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .btn-example {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .text-example {
+            font-size: 1.1rem;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Цветовые схемы для сайта Lada Niva Legend</h1>
+
+        <!-- Схема 1: Классическая внедорожная -->
+        <div class="scheme" style="background: #F5F5F5; border-left: 5px solid #2E7D32;">
+            <div class="scheme-title" style="color: #2E7D32;">1. Классическая внедорожная (зелёно-чёрная)</div>
+            <div class="colors">
+                <div class="color-box" style="background: #2E7D32;">#2E7D32</div>
+                <div class="color-box" style="background: #000000;">#000000</div>
+                <div class="color-box" style="background: #F5F5F5;">#F5F5F5</div>
+                <div class="color-box" style="background: #212121;">#212121</div>
+                <div class="color-box" style="background: #1B5E20;">#1B5E20</div>
+            </div>
+            <div class="usage">
+                <strong>Использование:</strong><br>
+                • Заголовки, логотип — <code>#2E7D32</code><br>
+                • Текст — <code>#212121</code><br>
+                • Фон — <code>#F5F5F5</code><br>
+                • Кнопки — <code>#1B5E20</code><br>
+                • Акценты — <code>#000000</code>
+            </div>
+            <div class="text-example" style="background: #F5F5F5; color: #212121;">
+                Пример текста на фоне #F5F5F5
+            </div>
+            <a href="#" class="btn-example" style="background: #1B5E20;">Забронировать</a>
+        </div>
+
+        <!-- Схема 2: Природная -->
+        <div class="scheme" style="background: #FFFFFF; border-left: 5px solid #388E3C;">
+            <div class="scheme-title" style="color: #388E3C;">2. Природная (зелёно-бежевая)</div>
+            <div class="colors">
+                <div class="color-box" style="background: #388E3C;">#388E3C</div>
+                <div class="color-box" style="background: #D7CCC8;">#D7CCC8</div>
+                <div class="color-box" style="background: #5D4037;">#5D4037</div>
+                <div class="color-box" style="background: #FFFFFF;">#FFFFFF</div>
+                <div class="color-box" style="background: #333333;">#333333</div>
+            </div>
+            <div class="usage">
+                <strong>Использование:</strong><br>
+                • Заголовки — <code>#388E3C</code><br>
+                • Блоки — <code>#D7CCC8</code><br>
+                • Текст — <code>#333333</code><br>
+                • Фон — <code>#FFFFFF</code><br>
+                • Акценты — <code>#5D4037</code>
+            </div>
+            <div class="text-example" style="background: #FFFFFF; color: #333333;">
+                Пример текста на белом фоне
+            </div>
+            <a href="#" class="btn-example" style="background: #388E3C;">Забронировать</a>
+        </div>
+
+        <!-- Схема 3: Техно-серая -->
+        <div class="scheme" style="background: #FAFAFA; border-left: 5px solid #FF6D00;">
+            <div class="scheme-title" style="color: #FF6D00;">3. Техно-серая (серо-оранжевая)</div>
+            <div class="colors">
+                <div class="color-box" style="background: #FF6D00;">#FF6D00</div>
+                <div class="color-box" style="background: #616161;">#616161</div>
+                <div class="color-box" style="background: #FAFAFA;">#FAFAFA</div>
+                <div class="color-box" style="background: #212121;">#212121</div>
+                <div class="color-box" style="background: #FFFFFF;">#FFFFFF</div>
+            </div>
+            <div class="usage">
+                <strong>Использование:</strong><br>
+                • Кнопки — <code>#FF6D00</code><br>
+                • Навигация — <code>#616161</code><br>
+                • Текст — <code>#212121</code><br>
+                • Фон — <code>#FAFAFA</code><br>
+                • Акценты — <code>#FFFFFF</code>
+            </div>
+            <div class="text-example" style="background: #FAFAFA; color: #212121;">
+                Пример текста на светло-сером фоне
+            </div>
+            <a href="#" class="btn-example" style="background: #FF6D00;">Забронировать</a>
+        </div>
+
+        <!-- Схема 4: Минималистичная -->
+        <div class="scheme" style="background: #FFFFFF; border-left: 5px solid #C62828;">
+            <div class="scheme-title" style="color: #C62828;">4. Минималистичная (чёрно-белая)</div>
+            <div class="colors">
+                <div class="color-box" style="background: #000000;">#000000</div>
+                <div class="color-box" style="background: #FFFFFF;">#FFFFFF</div>
+                <div class="color-box" style="background: #C62828;">#C62828</div>
+                <div class="color-box" style="background: #333333;">#333333</div>
+                <div class="color-box" style="background: #EEEEEE;">#EEEEEE</div>
+            </div>
+            <div class="usage">
+                <strong>Использование:</strong><br>
+                • Заголовки — <code>#000000</code><br>
+                • Текст — <code>#333333</code><br>
+                • Фон — <code>#FFFFFF</code><br>
+                • Кнопки — <code>#C62828</code><br>
+                • Разделители — <code>#EEEEEE</code>
+            </div>
+            <div class="text-example" style="background: #FFFFFF; color: #333333;">
+                Пример текста на белом фоне
+            </div>
+            <a href="#" class="btn-example" style="background: #C62828;">Забронировать</a>
+        </div>
+
+        <!-- Схема 5: Зимняя/северная -->
+        <div class="scheme" style="background: #ECEFF1; border-left: 5px solid #1976D2;">
+            <div class="scheme-title" style="color: #1976D2;">5. Зимняя/северная (сине-серая)</div>
+            <div class="colors">
+                <div class="color-box" style="background: #1976D2;">#1976D2</div>
+                <div class="color-box" style="background: #B0BEC5;">#B0BEC5</div>
+                <div class="color-box" style="background: #FFFFFF;">#FFFFFF</div>
+                <div class="color-box" style="background: #ECEFF1;">#ECEFF1</div>
+                <div class="color-box" style="background: #263238;">#263238</div>
+            </div>
+            <div class="usage">
+                <strong>Использование:</strong><br>
+                • Заголовки — <code>#1976D2</code><br>
+                • Блоки — <code>#B0BEC5</code><br>
+                • Текст — <code>#263238</code><br>
+                • Фон — <code>#ECEFF1</code><br>
+                • Акценты — <code>#FFFFFF</code>
+            </div>
+            <div class="text-example" style="background: #ECEFF1; color: #263238;">
+                Пример текста на холодном сером фоне
+            </div>
+            <a href="#" class="btn-example" style="background: #1976D2;">Забронировать</a>
+        </div>
+
+    </div>
+</body>
+</html>
