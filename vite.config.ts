@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/', // Это самое важное! Чтобы пути начинались от корня сайта
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    assetsDir: 'static',
     emptyOutDir: true,
   },
 })
