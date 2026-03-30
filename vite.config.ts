@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Это самое важное! Чтобы пути начинались от корня сайта
+  // Это заставит пути быть относительными (assets/...), что идеально для хостинга
+  base: './', 
   build: {
     outDir: 'dist',
-    assetsDir: 'static',
+    assetsDir: 'assets',
     emptyOutDir: true,
   },
 })
