@@ -2,8 +2,8 @@ name: Build and Package ZIP
 
 on:
   push:
-    branches: [main] # Запускать при каждом обновлении основной ветки
-  workflow_dispatch: # Позволяет запускать сборку вручную кнопкой
+    branches: [main]
+  workflow_dispatch: # Позволяет запустить сборку кнопкой в любое время
 
 jobs:
   build:
@@ -27,7 +27,9 @@ jobs:
 
       - name: Create ZIP archive
         run: |
+          # Переходим в папку dist, где лежит готовый сайт
           cd dist
+          # Упаковываем всё содержимое этой папки в архив уровнем выше
           zip -r ../niva-site-ready.zip .
 
       - name: Upload Artifact
@@ -35,3 +37,4 @@ jobs:
         with:
           name: niva-site-ready
           path: niva-site-ready.zip
+          retention-days: 7
